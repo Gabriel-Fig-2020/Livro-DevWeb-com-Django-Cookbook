@@ -1,6 +1,7 @@
 import os, json
 from django.core.exceptions import ImproperlyConfigured
 from myproject.apps.core.versioning import get_git_changeset_timestamp
+from django.utils import gettext_lazy as _
 
 with open(os.path.join(os.path.dirname(__file__), 'secrets.json', 'r')) as f:
     secrets = json.loads(f.read())
@@ -20,6 +21,16 @@ def get_secret(setting):
 #     except KeyError:
 #         error_msg = f'Set the {setting} environment variable'
 #         raise ImproperlyConfigured(error_msg)
+
+MAGAZINE_ARTICLE_THEME_CHOICES = [
+    ('futurism', _("Futurism")),
+    ('nostalgia', _("Nostalgia")),
+    ('sustainability', _("Sustainability")),
+    ('wonder', _("Wonder")),
+    ('positivity', _("Positivity")),
+    ('solutions', _("Solutions")),
+    ('science', _("Science")),
+]
 
 BASE_DIR = os.path.dirname(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
