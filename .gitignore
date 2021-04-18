@@ -1,0 +1,49 @@
+secrets.json
+__pycache__/
+*.py[cod]
+*$py.class
+
+#logs de intaladores
+pip-log.txt  
+pip-delete-this-directory.txt 
+
+#Relatorios de testes de unidade / cobertura  
+htmlcov/
+.tox/  
+.nox/ 
+.coverage   
+.coverage.*  
+.cache 
+nosetests.xml  
+coverage.xml  
+*.cover  
+.hypothesis/  
+.pytest_cache/  
+
+#traduções
+*.mo 
+*.pot
+
+#Arquivos relacionados ao django 
+*.log  
+db.sqlite3  
+
+#documentação Sphinx  
+docs/_build/  
+
+#Ipython 
+profile_default  
+ipython_config.py 
+
+#Ambientes 
+venv/  
+
+#Diretorios de mídia e estaticos 
+/media/
+!/media/.gitkeep
+
+#dados sigilosos
+secrets.json
+secrets.json
+
+venv/*
